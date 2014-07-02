@@ -24,7 +24,7 @@ let MVIsSimulator = TARGET_IPHONE_SIMULATOR
 let MVIsIPad = MVCurrentDevice.userInterfaceIdiom == .Pad
 let MVIsIPhone = MVCurrentDevice.userInterfaceIdiom == .Phone
 let MVIsIPhone5 = MVIsIPhone && CGSizeEqualToSize(MVMainScreen.preferredMode.size, CGSizeMake(640, 1136))
-let MVIsRetine = MVMainScreen?.scale && MVMainScreen.scale == 2
+let MVIsRetina = MVMainScreen?.scale && MVMainScreen.scale == 2
 let MVSystemVersionEqualTo: (String) -> (Bool) = {(version:String) -> Bool in MVCurrentDevice.systemVersion.compare(version, options: NSStringCompareOptions.NumericSearch, range: nil, locale: nil) == NSComparisonResult.OrderedSame}
 let MVSystemVersionGreaterThan: (String) -> (Bool) = {(version:String) -> Bool in MVCurrentDevice.systemVersion.compare(version, options: NSStringCompareOptions.NumericSearch, range: nil, locale: nil) == NSComparisonResult.OrderedDescending}
 let MVSystemVersionGreaterThanOrEqualTo: (String) -> (Bool) = {(version:String) -> Bool in MVCurrentDevice.systemVersion.compare(version, options: NSStringCompareOptions.NumericSearch, range: nil, locale: nil) != NSComparisonResult.OrderedAscending}
